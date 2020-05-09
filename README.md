@@ -1,16 +1,17 @@
 # wd_mycloud_apps
 How to do custom Western Digital MyCloud Apps
 
-## update
-  openssl bf-cbc -e -out apkg.sign -k Lidho.mdk3K3h -md md5
-    <<enter package name>>[CTRL+D][CTRL+D]
+## create or resign apkg.sign:
+  `openssl bf-cbc -e -out apkg.sign -k Lidho.mdk3K3h -md md5`
+    << enterpackage name>>[CTRL+D][CTRL+D]
 ## check
-  openssl bf-cbc -d -in apkg.sign -k Lidho.mdk3K3h -md md5
-## extract
-  dd if=transmission_MyCloud_2.94-16.bin of=temp.tar.gz skip=200 iflag=skip_bytes,count_bytes
+  `openssl bf-cbc -d -in apkg.sign -k Lidho.mdk3K3h -md md5`
+  
+## extract tar.gz from .bin file
+  `dd if=transmission_MyCloud_2.94-16.bin of=temp.tar.gz skip=200 iflag=skip_bytes,count_bytes`
 
-## Create
-  mkpkg32_forced_md5 -E -s -m WDMyCloud
+## Create a .bin
+  `mkpkg32_forced_md5 -E -s -m WDMyCloud <.tar.gz file>`
 
 
 source: https://fox-exe.ru/WDMyCloud/WDMyCloud-Gen2/Apps/
