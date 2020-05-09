@@ -8,3 +8,6 @@ How to do custom Western Digital MyCloud Apps
   openssl bf-cbc -d -in apkg.sign -k Lidho.mdk3K3h -md md5
 ## extract
   dd if=transmission_MyCloud_2.94-16.bin of=temp.tar.gz skip=200 iflag=skip_bytes,count_bytes
+
+## Create
+  mkpkg32_forced_md5 -E -s -m WDMyCloud
