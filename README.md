@@ -2,8 +2,10 @@
 How to do custom Western Digital MyCloud Apps
 
 ## create or resign apkg.sign:
-  `openssl bf-cbc -e -out apkg.sign -k Lidho.mdk3K3h -md md5`
-    << enterpackage name>>[CTRL+D][CTRL+D]
+  ```
+  openssl bf-cbc -e -out apkg.sign -k Lidho.mdk3K3h -md md5
+  << enterpackage name>>[CTRL+D][CTRL+D]
+  ```
 ## check
   `openssl bf-cbc -d -in apkg.sign -k Lidho.mdk3K3h -md md5`
   
@@ -15,6 +17,7 @@ How to do custom Western Digital MyCloud Apps
 
 
 source: https://fox-exe.ru/WDMyCloud/WDMyCloud-Gen2/Apps/
+```
 ============ EN ============
 1. Go to web interface
 2.a In "URL" field (In your browser) type:
@@ -35,3 +38,4 @@ https://community.wd.com/t/wd-mycloud-gen2-enable-apps-install-tab-apps/177885/1
 $("#AppsDiag_Manually_Install").remove();
 var input = '<input type="file" name="f_apps_file" class="file_input_hidden" id="f_apps_file" onchange="apps_manually_install();">Install an app manually</div>';
 $("#manually_install_td").append(input);
+```
