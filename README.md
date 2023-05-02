@@ -7,7 +7,7 @@ Tips:
 
 ## create or resign apkg.sign:
   ```
-  openssl bf-cbc -e -out apkg.sign -k Lidho.mdk3K3h -md sha256
+  openssl bf-cbc -e -out apkg.sign -k Lidho.mdk3K3h -md sha256 -provider legacy -provider default
   << enterpackage name>>[CTRL+D][CTRL+D]
   ```
 ## check signature
