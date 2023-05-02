@@ -12,9 +12,9 @@ Tips:
   ```
 ## check signature
   #### OS 3 package
-  `openssl bf-cbc -d -in apkg.sign -k Lidho.mdk3K3h -md md5`
+  `openssl bf-cbc -d -in apkg.sign -k Lidho.mdk3K3h -md md5 -provider legacy -provider default`
   #### OS 5 package
-  `openssl bf-cbc -d -in apkg.sign -k Lidho.mdk3K3h -md sha256`
+  `openssl bf-cbc -d -in apkg.sign -k Lidho.mdk3K3h -md sha256 -provider legacy -provider default`
   
 ## extract tar.gz from .bin file
   #### OS 3 package
